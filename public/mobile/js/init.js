@@ -33,7 +33,7 @@
     if (navigator.serviceWorker && navigator.serviceWorker.controller) {
       navigator.serviceWorker.controller.postMessage({
         action: 'notify',
-        message: 'Hello !'
+        message: 'Hello from mobile web app!'
       });
     }
   });
@@ -48,7 +48,18 @@
     }
   });
 
-
+  Notification.requestPermission().then((result) => {
+    if (result === 'denied') {
+      alert('Permission wasn\'t granted. Allow a retry.');
+      return;
+    }
+    if (result === 'default') {
+      alert('The permission request was dismissed.');
+      return;
+    }
+    // Do something with the granted permission.
+    console.log('notification autorisée');
+  });
 
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/mobile/sw.js', {

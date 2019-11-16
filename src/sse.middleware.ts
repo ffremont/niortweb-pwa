@@ -12,11 +12,8 @@ export class SseMiddleware implements NestMiddleware {
 
   constructor(readonly sseService: SseService) {
     sseService.sseMsg$.subscribe((msgData: MsgData) => {
-      console.log('subscribe');
 
-      [ ...this.clients.values() ].forEach( ( sse ) => {
-        console.log(this.idCounter);
-        
+      [ ...this.clients.values() ].forEach( ( sse ) => {        
         this.idCounter += 1;
         const eventData: EventData<MsgData> = {
           id: String(this.idCounter),

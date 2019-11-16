@@ -44,25 +44,18 @@ workbox.routing.setCatchHandler(({event}) => {
 
 
   self.addEventListener('message', function(event) {
-    console.log(event);
-    /**
-     * const notificationOptions = {
-    body: dataJSON.body,
-    data: {
-      url: dataJSON.url
+    if (event.data.action === 'notify' && self.registration && self.registration.showNotification) {
+      self.registration.showNotification('Mobile web app 🗲', {
+        body: event.data.message,
+        data: {
+          myUrl: '/'
+        },
+        icon: '/assets/images/favicon-32x32.png'
+      });
     }
-  };
-  if(!dataJSON.icon){
-    notificationOptions.icon = '/android-icon-48x48.png';
-  }
-
-  self.registration.showNotification(dataJSON.title, notificationOptions);
-     */
   });
 
   self.addEventListener('notificationclick', event => {
-    console.log('FROM worker js (notificationclick)');
-  
     const url = event.notification.data.url;
     event.notification.close();
     event.waitUntil(clients.openWindow(url));

@@ -2,7 +2,6 @@
   $(function () {
     console.log('v3')
     $('.sidenav').sidenav();
-
   }); // end of document ready
 
   $('#http-call').click((e) => {
@@ -11,10 +10,35 @@
       .catch((e) => console.log(`Erreur lors de la récupération de l'image PWA : ${e}`))
   });
 
+  $('#sse-call').click((e) => {
+    fetch(`/messages`, {
+      method:'POST', 
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({message: `Hello ${(new Date()).getTime()}`})
+    });
+  });
+
   $('#img-call').click((e) => {
     const myImage = new Image(100, 200);
     myImage.src = `/assets/images/apple-touch-icon.png?ts=${(new Date()).getTime()}`;
   });
+
+  
+  Notification.requestPermission().then((result) => {
+    if (result === 'denied') {
+      alert('Permission wasn\'t granted. Allow a retry.');
+      return;
+    }
+    if (result === 'default') {
+      alert('The permission request was dismissed.');
+      return;
+    }
+    // Do something with the granted permission.
+    console.log('notification autorisée');
+  });
+  
 
 
   if ('serviceWorker' in navigator) {

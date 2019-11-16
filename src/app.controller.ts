@@ -1,5 +1,6 @@
 import { Controller, Get, Post, Body } from '@nestjs/common';
 import { AppService } from './app.service';
+import { Request } from 'express';
 import { SseService } from './sse/sse.service';
 
 @Controller()
@@ -12,8 +13,9 @@ export class AppController {
   }
 
   @Post('/messages')
-  async addMessage(@Body() msg: string) {
-    this.sseService.fire(msg);
+  async addMessage(@Body() body: any){
+    console.log(body);
+    this.sseService.fire(body.message);
 
     return 'yes !';
   }
