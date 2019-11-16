@@ -14,6 +14,16 @@
 
     // https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent
     ctx.beforeInstallPromptEvent = e;
+    $('#install-call').show();
+    e.userChoice.then(function(choiceResult) {
+      if (choiceResult.outcome == 'dismissed') {
+        console.log('User cancelled homescreen install');
+        
+        $('#install-call').hide();
+      } else {
+        console.log('User added to homescreen');
+      }
+    });
   });
 
   // https://developer.mozilla.org/en-US/docs/Web/API/Window/appinstalled_event
