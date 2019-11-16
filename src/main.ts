@@ -5,6 +5,6 @@ import sseMiddleware from 'express-sse-middleware';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.use(sseMiddleware);
-  await app.listen(3000);
+  await app.listen(process.env.PORT || 3000);
 }
 bootstrap();
