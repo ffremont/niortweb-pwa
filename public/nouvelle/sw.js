@@ -3,6 +3,9 @@ importScripts('/nouvelle/js/workbox-sw-4.3.1.js');
 const OFFLINE_PAGE = '/nouvelle/offline.html';
 const FALLBACK_IMAGE_URL = '/assets/images/fff.png';
 
+const ctx = {
+  eventSource: null
+}
 
 console.log(`Yay! Workbox is loaded 🎉`);
 
@@ -66,24 +69,26 @@ workbox.routing.setCatchHandler(({
   }
 });
 
-
-// si la version est activitée, on active SSE^^
-self.addEventListener('activate', event => {
-  console.log('Service worker activating...');
-  // à chaque nouveau msg, on affiche la notification
-  const eventSource = new EventSource('/sse');
-  eventSource.addEventListener('newData', (e) => {
-    console.log('SW - newData !');
-    const payload = JSON.parse(e.data);
-
-    if (self.registration && self.registration.showNotification) {
-      self.registration.showNotification('Nouvelle web app 🗲', {
-        body: payload.msg,
-        data: {
-          myUrl: 'https://google.fr'
-        },
-        icon: '/assets/images/favicon-32x32.png'
-      });
+self.addEventListener('message', function (event) {
+  if (event.data.action === 'app-ready') {
+    if(ctx.eventSource){
+      ctx.eventSource.close();
     }
-  });
+
+    ctx.eventSource = new EventSource('/sse');
+    eventSource.addEventListener('newData', (e) => {
+      console.log('SW - newData !');
+      const payload = JSON.parse(e.data);
+
+      if (self.registration && self.registration.showNotification) {
+        self.registration.showNotification('Nouvelle web app 🗲', {
+          body: payload.msg,
+          data: {
+            myUrl: 'https://google.fr'
+          },
+          icon: '/assets/images/favicon-32x32.png'
+        });
+      }
+    });
+  }
 });
