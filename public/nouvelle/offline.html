@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Page hors ligne</title>
+
+     <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        
+      }
+      #message a+a{
+        margin-top:15px;
+      }
+      .content{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="message">
+      <h2>Oups...</h2>
+      <h1>Aucune connexion</h1>
+      <div class="content">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADggAAA4IBgwb9egAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAA5DSURBVHja7V17bFvVGXcLZdBSoWm8SgcMNOgejMdWxEBAoRtCFCa0MWBM2ko3MlYmNtby1DYNoU1CaIMh2tIWVcBK05LFjh0nTdI0tgsIVayiVJBQ3+tXGt9z7aSU0ldsp83d77NvWRpi+17b18/vj5/c2rHvPef7ne91vu9cm6ZpNkbjgieBCcCTwARgMAEYTAAGE4DBBGAwARhMAAYTgMEEYDABGEwABhOAwQSoQXjDsVnAXGAeMB+4CbgDuA9oAv6oo0l/7w79b+br36HvzmICVLeQZwKXA3cBTwLrgLeBGKCVCDH9N9fp17hLv+ZMJkB5hT0duAr4A2AHhoDxEgraLMb1e7Dr90T3Np0JUDqBzwC+DzwBdAL7Kyhso9iv3+sT+r3PYAKYE/ppwL2AEzhcAwLPh8P6WGhMpzEBphb6ycAiYD1wsA6Eng0H9THSWE9uaAJgAqYBNwCrgJE6Fno2jOhjpzmY1jAE0O36/cCAVZPrAXqDqtYNdAVUbbOODsAtC80dEFo7Xl1SBvRvep8+75QB+vugwHeF1oPf6A1mftNCMgzoczKjbgmAwc0GlgPRkgk5FNO6AxmBkQCdkqLZ/UJr9SuWwA4QYTpwLSIUkWNrqKREiOpzNLtuCIDBnAP8Hfi0WIFvCWWE7ZIUy4RcGDGgSXRS0D16wmqxRPhUn7NzapYAuPnzgNXAaKEC7wllVLJTElUlcCNwpgkhtC3Boggxqs/heTVDANzsKXq2rCBvntQq2WR7jQk8p4aAxiITtSVUVPRAc3pKVRMAN3g7IJsdIK0ScsystN/HVTWEccwhKak2SRyGZtmP18/aJOUICJfC58esJoMDIGezQN+B5vb2qiMAbuoSPftleDA0AR0QuqOE6t3hFwmnrKiwx++1B8R6t6wsh9N2XYsk5myW5S8ZHY9biJmdofgFHf7YD9yy+he3JOwuWdkFtT6C+02V6n5BvLSZ6AuZNhE015dUnAC4idOBZ4Gk4dUOwZPDVLSwJSUJ4Q60S2IFTMb1a3bsKFsI1aGIWS5JvRPX3gCHNIxVfbTY8ZAGNKkVkvrcn14RAuDC1wAhM7a9GGcOAj+CCd+JiXrOHVC+WW0pVaj1Be0B5RWMUbJLYqzQcZL/02tOI5AMrikbAfQM3mNAysgNUpzeJhUs9ES7rGx1B2MLa2ybdZoroP4K2mEn+RyFjJ1C3Z6gYRKkdJlMs5QAuMDZQJdRwdsLWPFwxsag2re7Aso99VBwQaYJWutRjMmP8Y2b9xNEOqtpkAgkm7MtIQB+eCEg8t0EqS+nVIhDJES7rD7comkn1Wv1zcYPY7MRDj4Pn+GQaR8BpqHPGAlIRgtLRgD82EnA34Bj+RI35MiYVnWykOFQ3dFgtXjTEKUsg2nca3a+aI/CwL7EMV1mJxVFAPzAGYAnH+tow8VMDA81Pw6VuMMVjM5v9KJMhJj3wnEcNOkbpXMnBrQBye6Mggigp3J35QvpzDh4es78LcTYX+OK3BMBp/FGmM6gSe2p9eUPHXflSiVnEz5VxEZy/TBtypi18R2yegMLO49GkEUTVvhhMzuU3fm1AclyniEC6PH93qy2PmRuNw4OT7I9oD7FwjURbXm1k12y8hqEaziEpC3qPCTYO1W+YLLwF+Wqw6O41GHCzrfLwu3YE53FQi0MMJUXwj/4wExqOU82kWS7aEoC4IPFwNjUHj5tywoz6v6TjkD0uyzEkjmK91BSzKhJ6MptEkjGi08ggN4VM+UXyMkwk8J1yqK7nHn5RsF/+ofOxgqXzKSU84SL6UQbCf/8bPX2VHJlQuWPtUuiiYVlcbQgixVGM4pkEnLsNFJR6lk2vTJ1Sntvlwyr/D2Oj+MXsIDKFTKKHzokcdho/UEOv+AfRID3v5DHD6omYlFl/dOaNp0FU1609g/PxgrfabQiKct+wrtEgAMT39xsPL4fd8nq8loNs3qD+87oG9o7963IyJx3do/MrlUSwz9rNeoc9nzRHBwgAmw//kaHQU+fSqecAfVn1SpcT0iZ5wvFfuSNxJf7wrE1eko0jH9/gtdEDsfoCDDsjVDpldqFv3/RG1F/5wvFb+kLiQurlwTKv4xqbNqlnTDenUSA5+k/7UaFL4mUS1IWVMvgqdQLwrnRG4r9GePYAhyysIFj2BtSW+Fd/94bHr6ymrRGu6Q8atQ5pA0lfTyr03X7blkkDG5CHHLtVitejeP1izN94fhSfWUnKtkJ7Aurdl9IvfvdoaGKN366/NH7jBa2dgUElZxfdFyFdBvw9EeouLJSgyM7DVX8C284vhkqeqzqev0isYPAel9EvY3MUMVIAO1sN1C42hFQX56YCZwGE7AS3uKUKoQI8mo4fGolBrR1MH4xBL9St8810fgJ3yFOJuntwcEvV4QEwdhcyOzjLGHhWIesPjrlXkC7HLvCJYnX8eUBrPigU1bseL29ImoeNhaTuRE4WrMdwJF0Q8cL2wLK+ZVxDtUlLll0QYaDCBnfxyJf4QoNnlPVB0RsiwxfBQ+8u7TdwtSIoabrF6iQomdC5zB1AHfr71FfX6/e8FnibuAUTNdrXjn6VT4gIpuqj0a/AsG/7MtTepa3gTSYaQWn8jTq5LUX2cWT7gYOiDRZTBRnZsMhjO+plv7+U5gAOqgI1BNRH9JjdHMCD2X6Dag4BeaqTJ3AmUqcTp0QnsJMg4wxL2p4AmwLxr6DCfnA7Conle2qko5hSrNSDqWnsLZw51uyelZDEsATjv/GjGdfC13DhXQBQ/MpMH03NQwBKAePQb9pdIKouMFRgy3hZJK6DfoMGb9HfboSPRHlDe2CYj4GGzRi26lr1i4Vba8TCH9GqJDCKYt3XJLSghD3ubaA2tQ6IG6wS/GLHR9HL22VxS34m4fx2YtOSTghvPcQOoVAvH12f+F9fpnsKRxIY7X8BN+WPSPn1SUB0pszeVS+J1y04MchuDD8gxc2BaOXlqqJw+EX14FAbzgkZbgY57HLmEbYs3VQ/VZdEQBe76/zJXTIxjukgiY2iVW73SmrS127Ryw/XKmlf/hcp1/8FRqj315AWziV1/Xm9RHi+7zB4evr45CozC5dzoMiCvDoxzGRfW1S9GZaoRULYRHP4z7ubpPFh2aJ0JG/12/UE4n/pKYJoOfwc7SUmT8WhlZ760D069WWUWvzKzcDIbOJplwtXhnnMP5gjZ4SFv9t1krjsPlTQuCgfeQMiKovNW/zR3/c5heqKW0QyJFDiMTGKD1eUwTYFold5MvSYEIxsplzAzJOXc0dEGFz+ZUH4NPsM0HwXH1+O60qPinr6jdRb0glzXR6109ruXCThAaT9TidQGa4bi+bSQjELqsZAngisbWTB+CWzTSXKAPl8OjLBUcwegnI/InR8ZNv9EUSqPfXjgYIxVdMjO3bzQhfEm9W0rO3rL1LiJlm+vw6Tyze1KgErnYIkIn70zbNRIg37vQry+q9nh/a7fVCOn59QfXqmiEA1dtDZR0wengEnKVRRyC6oN6FP6GC9yGjrd+uTI9fyKoaAusGKStOg86esA8Mz2kU4X8+P0FxrcMvjhg8RHJZzeUByOa1ybkTIwh9ehu5k7hFEmc5/ULK4xD31nQq2BVQn6d8/SSVf9Dpj/6Se/yOa0v1GYf/xP5/zNFn8J8sn6PyOT8B5XyHFL3NPhCZw0LPohGC4gKao5YyVgnxxDc4GmaglJXzhofPpX4DTzh+K6KUxZ6w+rgnEl/micR+3heJLfQMqt+m6mQmQJ2AOnNIuAijmtN77Mbr9AZBjlVUuVsNPX9MAJNl5r6wusQXjm8rUVfREW8k5qaePyZAlat4X+awK8m6Vi/1bWpFZwJUGaDi78Qq/bCMzZ89nkHxPSZAhbFjhzaD2skq1Pg5ZtUGDRPA4CERVEZdBV3Aq4mITIByNpKG4pfTmT9GhUS7klSSTU2ebv2ZwbRRZZcyRRjO9PODMw9u6tQfCWuy589HhGQClK+f8JCRJ5dQj4GziOYSIgp1BRt8rJvk7R8+nQlg6aER4VPzOXt0wKUVj5p1GXua12omgLXdRU1ZV3xQLWq1m3p2TyhXW5syjwlgFQEyZ/4VXWJeikfQdmYt5VYXMwGsazHrndxVVFA7maSM0XYrMERPMoFAD+K9o4U8288zSRt4IvHnmADWEeClz219SDV1VgC8/iGnFH3J8ZH4RrYm0FZ5aAG0ySYQY7+ZBzideBiztZ08De4D0DmBsfRJl4YF71eGHH7TJ51NgyP5CIR7wGg9//9bvIavZAJYeA7w5oA6aLjKWFaeKXZjCY5lm1Gy9QTVHo4CLK8sEo8ZWJGptoAo2cMoYRaetOc5h5eqfB1+5VomQDkaMGV1iV0SySy2fneLf+/ckl9Til1Nx+VmueZe+pwzgWVE827lTDoJxCmL7bDVIaj7TpdfabKyq4hMAkjwBK7pwWvERa+y8lQlzwbm7WAGE4DBBGAwARhMAAYTgMEEyD/oTakrbM2JR2zNyfV4XWtrTj1o2zB6IROg3gf7qnYqhP1PCP4YoE3CIduG1FImQD0PdmPSPYXgJ+NPTIB6HGhzaokB4RNSZCKYAHVHgOQugwTQbBsTa5gAdWf7k2OGCdCc/C8ToJ4GuSFxsQnhA4lhJkA9DfJpbXrayyfhbkhotnXAGmAlsGpUs72C19cSEwiQ8jIB6s4HSPhsb0C4L0PgL2XBWpBgA/kAyWeZAHVnBo4usK3MIfzjWJNI2Jq1M5kA9TjYdYlXbStyCH/V6DhMwQOcB6jriCC51LY6ceQEbUD/Xjs6Yvv36PUNNx8Nmf8mp3BT8jKQ4Unb64mlFCXwZhCDCcBgAjCYAAwmAIMJwGACMJgADCYAgwnAYAIwmAAMJgCDCcBgAjDqCP8Dbraeiux4bpgAAAAASUVORK5CYII=">
+      <p>Pour utiliser cette application vous devez disposer d'une connexion internet.</p>
+      </div>
+    </div>
+
+  </body>
+</html>
