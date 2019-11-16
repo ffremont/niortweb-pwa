@@ -76,7 +76,7 @@ self.addEventListener('message', function (event) {
     }
 
     ctx.eventSource = new EventSource('/sse');
-    eventSource.addEventListener('newData', (e) => {
+    ctx.eventSource.addEventListener('newData', (e) => {
       console.log('SW - newData !');
       const payload = JSON.parse(e.data);
 
