@@ -1,6 +1,10 @@
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
+  <img src="https://res.cloudinary.com/dyuwlqafx/image/upload/v1574269633/niortWeb/Capture_d_%C3%A9cran_2019-11-06_17-23-14.pngg" width="320" alt="NiortWeb Logo" />
 </p>
+
+Support de présentation de NiortWeb du 19.11.19 sur les PWA.
+
+
 
 [travis-image]: https://api.travis-ci.org/nestjs/nest.svg?branch=master
 [travis-url]: https://travis-ci.org/nestjs/nest
