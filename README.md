@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://res.cloudinary.com/dyuwlqafx/image/upload/v1574269633/niortWeb/Capture_d_%C3%A9cran_2019-11-06_17-23-14.pngg" width="320" alt="NiortWeb Logo" />
+  <img src="https://res.cloudinary.com/dyuwlqafx/image/upload/v1574269633/niortWeb/Capture_d_%C3%A9cran_2019-11-06_17-23-14.png" width="320" alt="NiortWeb Logo" />
 </p>
 
 Support de présentation de NiortWeb du 19.11.19 sur les PWA.
